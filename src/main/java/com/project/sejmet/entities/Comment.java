@@ -1,4 +1,5 @@
 package com.project.sejmet.entities;
+
 import java.io.Serializable;
 
 import javax.persistence.Entity;
@@ -13,21 +14,22 @@ import javax.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name="sale_product")
+@Table(name="comment")
 @Data
-public class SaleProduct implements Serializable{
+public class Comment implements Serializable{
     @Id
-    @SequenceGenerator(name="sale_product_id_seq", allocationSize=1)
-    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="sale_product_id_seq")
+    @SequenceGenerator(name="image_id_seq", allocationSize=1)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="image_id_seq")
     private int id;
 
     @OneToOne
-    @JoinColumn(name="sale_id")
-    private Sale sale;
+    @JoinColumn(name="sale_product_id")
+    private SaleProduct saleProduct;
 
     @OneToOne
-    @JoinColumn(name="product_id")
-    private Product product;
+    @JoinColumn(name="user_id")
+    private User user;
 
-    private int productAmount;
+    private String strComment;
+    private int score;
 }
