@@ -16,8 +16,8 @@ import javax.persistence.Table;
 @Data
 public class Role implements Serializable{
     @Id
-    @SequenceGenerator(name="user_id_seq", allocationSize=1)
-    @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="user_id_seq")
+    @SequenceGenerator(name="role_id_seq", allocationSize=1)
+    @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="role_id_seq")
     private int id;
 
     private String roleName;
