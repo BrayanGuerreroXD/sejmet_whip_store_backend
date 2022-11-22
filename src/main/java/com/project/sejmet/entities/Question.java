@@ -16,7 +16,7 @@ import lombok.Data;
 @Entity
 @Table(name="question")
 @Data
-public class question implements Serializable{
+public class Question implements Serializable{
     @Id
     @SequenceGenerator(name="question_id_seq", allocationSize=1)
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="question_id_seq")
