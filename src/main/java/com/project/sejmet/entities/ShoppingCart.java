@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.persistence.Column;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -31,5 +32,6 @@ public class ShoppingCart {
     @JoinColumn(name="user_id")
     private User user;
 
+    @Column(name = "amount")
     private int amount;
 }
