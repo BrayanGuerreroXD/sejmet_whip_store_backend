@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Column;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -26,6 +27,9 @@ public class Image implements Serializable{
     @JoinColumn(name="product_id")
     private Product product;
 
+    @Column(name = "image_name")
     private String imageName;
+
+    @Column(name = "image_src")
     private String imageSrc;
 }
