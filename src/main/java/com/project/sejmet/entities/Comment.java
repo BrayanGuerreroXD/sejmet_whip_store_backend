@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.persistence.Column;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -30,6 +31,9 @@ public class Comment implements Serializable{
     @JoinColumn(name="user_id")
     private User user;
 
+    @Column(name = "str_comment")
     private String strComment;
+
+    @Column(name = "score")
     private int score;
 }
