@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Column;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -26,10 +27,21 @@ public class User implements Serializable {
     @JoinColumn(name="role_id")
     private Role role;
 
+    @Column(name = "user_name")
     private String userName;
+
+    @Column(name = "type_identity_card")
     private String typeIdentityCard;
+
+    @Column(name = "identity_card_number")
     private int identityCardNumber;
+
+    @Column(name = "email")
     private String email;
+
+    @Column(name = "password")
     private String password;
+
+    @Column(name = "address")
     private String address;
 }
