@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Column;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -27,7 +28,12 @@ public class Sale implements Serializable{
     @JoinColumn(name="user_id")
     private User user;
 
+    @Column(name = "sale_date")
     private Date saleDate;
+
+    @Column(name = "delivery_date")
     private Date deliveryDate;
+
+    @Column(name = "total_price")
     private int totalPrice;
 }
