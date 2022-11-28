@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Column;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -20,5 +21,6 @@ public class Role implements Serializable{
     @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="role_id_seq")
     private int id;
 
+    @Column(name = "role_name")
     private String roleName;
 }
