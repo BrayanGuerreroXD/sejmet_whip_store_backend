@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Column;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -30,5 +31,6 @@ public class Question implements Serializable{
     @JoinColumn(name="user_id")
     private User user;
 
+    @Column(name = "str_question")
     private String strQuestion;
 }
