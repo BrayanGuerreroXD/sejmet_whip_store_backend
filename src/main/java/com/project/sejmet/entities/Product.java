@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Column;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -26,10 +27,21 @@ public class Product implements Serializable{
     @JoinColumn(name="category_id")
     private Category category;
 
+    @Column(name = "product_name")
     private String productName;
+
+    @Column(name = "visibility")
     private int visibility;
+
+    @Column(name = "sale_price")
     private int salePrice;
+
+    @Column(name = "stock")
     private int stock;
+
+    @Column(name = "product_description")
     private String productDescription;
+
+    @Column(name = "product_characteristics")
     private String productCharacteristics;
 }
