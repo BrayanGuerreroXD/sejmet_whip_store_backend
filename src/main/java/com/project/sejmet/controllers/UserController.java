@@ -27,13 +27,12 @@ public class UserController {
 
     @GetMapping
     public List<User> getUserAll() {
-
         return userRepository.findAll();
     }
 
 
     @GetMapping("/{id}")
-    public User getUsersbyId(@PathVariable int id) {
+    public User getUserbyId(@PathVariable int id) {
 
         Optional<User> user = userRepository.findById(id);
 
@@ -46,21 +45,18 @@ public class UserController {
 
 
     @PostMapping
-    public User postUsers(@RequestBody User user) {
-
+    public User postUser(@RequestBody User user) {
         userRepository.save(user);
-
         return user;
     }
 
 
     @PutMapping("/{id}")
-    public User putUsersbyId(@PathVariable int id, @RequestBody User user) {
+    public User putUserbyId(@PathVariable int id, @RequestBody User user) {
 
         Optional<User> userCurrent = userRepository.findById(id);
 
         if (userCurrent.isPresent()) {
-
             User userReturn = userCurrent.get();
 
             userReturn.setAddress(user.getAddress());
@@ -81,16 +77,13 @@ public class UserController {
 
 
     @DeleteMapping("/{id}")
-    public User deleteUsersbyId(@PathVariable int id) {
+    public User deleteUserbyId(@PathVariable int id) {
 
         Optional<User> user = userRepository.findById(id);
 
         if (user.isPresent()) {
-
             User userReturn = user.get();
-
             userRepository.deleteById(id);
-
             return userReturn;
         }
 
