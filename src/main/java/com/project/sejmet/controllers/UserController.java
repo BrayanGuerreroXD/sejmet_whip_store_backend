@@ -24,7 +24,7 @@ public class UserController {
 
 
     @GetMapping("/{id}")
-    public User getUsersbyEmail(@PathVariable int id) {
+    public User getUsersbyId(@PathVariable int id) {
 
         Optional<User> user = userRepository.findById(id);
 
@@ -46,7 +46,7 @@ public class UserController {
 
 
     @PutMapping("/{id}")
-    public User putUsersbyEmail(@PathVariable int id, @RequestBody User user) {
+    public User putUsersbyId(@PathVariable int id, @RequestBody User user) {
 
         Optional<User> userCurrent = userRepository.findById(id);
 
@@ -55,7 +55,12 @@ public class UserController {
             User userReturn = userCurrent.get();
 
             userReturn.setAddress(user.getAddress());
-            userReturn.setName(user.getName());
+            userReturn.setUserName(user.getUserName());
+            userReturn.setTypeIdentityCard(user.getTypeIdentityCard());
+            userReturn.setIdentityCardNumber(user.getIdentityCardNumber());
+            userReturn.setEmail(user.getEmail());
+            userReturn.setPassword(user.getPassword());
+            userReturn.setAddress(user.getAddress());
 
             userRepository.save(userReturn);
 
@@ -67,7 +72,7 @@ public class UserController {
 
 
     @DeleteMapping("/{id}")
-    public User deleteUsersbyEmail(@PathVariable int id) {
+    public User deleteUsersbyId(@PathVariable int id) {
 
         Optional<User> user = userRepository.findById(id);
 
