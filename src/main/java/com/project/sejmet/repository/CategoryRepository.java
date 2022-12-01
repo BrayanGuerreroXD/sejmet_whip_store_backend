@@ -1,4 +1,7 @@
 package com.project.sejmet.repository;
 
-public interface CategoryRepository {
+import com.project.sejmet.entities.Category;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CategoryRepository extends JpaRepository<Category, Integer> {
 }
