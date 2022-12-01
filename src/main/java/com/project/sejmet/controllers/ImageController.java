@@ -26,7 +26,7 @@ public class ImageController {
 
 
     @GetMapping
-    public List<Image> getRoleAll() {
+    public List<Image> getImageAll() {
         return imageRepository.findAll();
     }
 
