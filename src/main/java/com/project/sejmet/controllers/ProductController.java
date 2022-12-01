@@ -66,7 +66,7 @@ public class ProductController {
             productReturn.setStock(product.getStock());
             productReturn.setProductDescription(product.getProductDescription());
             productReturn.setProductCharacteristics(product.getProductCharacteristics());
-            
+
             productRepository.save(productReturn);
             return productReturn;
         }
