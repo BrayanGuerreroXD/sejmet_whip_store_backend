@@ -26,7 +26,7 @@ public class CommentController {
 
 
     @GetMapping
-    public List<Comment> getRoleAll() {
+    public List<Comment> getCommentAll() {
         return commentRepository.findAll();
     }
 
