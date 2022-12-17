@@ -7,7 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Column;
 import javax.persistence.SequenceGenerator;
@@ -18,7 +17,7 @@ import lombok.Data;
 @Entity
 @Table(name="shopping_cart")
 @Data
-public class ShoppingCart {
+public class ShoppingCart implements Serializable{
     @Id
     @SequenceGenerator(name="shopping_cart_id_seq", allocationSize=1)
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="shopping_cart_id_seq")
