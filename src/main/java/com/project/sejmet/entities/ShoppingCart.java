@@ -24,10 +24,6 @@ public class ShoppingCart {
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="shopping_cart_id_seq")
     private int id;
 
-    @ManyToOne
-    @JoinColumn(name="product_id")
-    private Product product;
-
     @OneToOne
     @JoinColumn(name="user_id")
     private User user;

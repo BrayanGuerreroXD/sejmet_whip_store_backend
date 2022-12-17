@@ -59,7 +59,6 @@ public class ShoppingCartController {
         if (shoppingCartCurrent.isPresent()) {
             ShoppingCart shoppingCartReturn = shoppingCartCurrent.get();
 
-            shoppingCartReturn.setProduct(shoppingCart.getProduct());
             shoppingCartReturn.setUser(shoppingCart.getUser());
             shoppingCartReturn.setAmount(shoppingCart.getAmount());
 
