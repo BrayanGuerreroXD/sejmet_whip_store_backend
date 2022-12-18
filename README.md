@@ -14,14 +14,18 @@ The following tools were used for the development of the project:
 
 The architecture of the project is Rest API
 
-## Railway
-
-Deployment variables used to connect to the database in Railway
 ```properties
-spring_profiles_active=prod
-PROD_DB_HOST=containers-us-west-161.railway.app
-PROD_DB_PORT=5997
-PROD_DB_NAME=railway
-PROD_DB_PASSWORD=8ftCs0tvpmXSauc18u3F
-PROD_DB_USERNAME=mysql
+java_version = 17
+spring_boot = 2.7.5
+mysql_driver = 8.0.30
+maven_compiler = 16
 ```
+
+### Controllers
+![img.png](img.png)
+
+### Entities
+![img_1.png](img_1.png)
+
+### Repositories
+![img_2.png](img_2.png)
