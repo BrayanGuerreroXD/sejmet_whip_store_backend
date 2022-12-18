@@ -13,3 +13,15 @@ The following tools were used for the development of the project:
 ![spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
 
 The architecture of the project is Rest API
+
+## Railway
+
+Deployment variables used to connect to the database in Railway
+```properties
+spring_profiles_active=prod
+PROD_DB_HOST=containers-us-west-161.railway.app
+PROD_DB_PORT=5997
+PROD_DB_NAME=railway
+PROD_DB_PASSWORD=8ftCs0tvpmXSauc18u3F
+PROD_DB_USERNAME=mysql
+```
