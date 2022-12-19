@@ -44,6 +44,13 @@ public class UserController {
     }
 
 
+    // Get user by email
+    @GetMapping("/findByEmail/{email}")
+    public User findByEmail(@PathVariable String email){
+        return userRepository.findByEmail(email);
+    }
+
+
     @PostMapping
     public User postUser(@RequestBody User user) {
         userRepository.save(user);
