@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-12-2022 a las 01:22:29
+-- Tiempo de generación: 22-12-2022 a las 15:16:48
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -84,6 +84,37 @@ CREATE TABLE `image` (
                          `image_name` varchar(100) NOT NULL,
                          `image_src` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `image`
+--
+
+INSERT INTO `image` (`id`, `product_id`, `image_name`, `image_src`) VALUES
+                                                                        (1, 1, 'APHRODISIA LEATHER WHIP 1', '/assets/images/products_images/APHRODISIA LEATHER WHIP/APHRODISIA LEATHER WHIP 1.jpg'),
+                                                                        (2, 1, 'APHRODISIA LEATHER WHIP 2', '/assets/images/products_images/APHRODISIA LEATHER WHIP/APHRODISIA LEATHER WHIP 2.jpg'),
+                                                                        (3, 1, 'APHRODISIA LEATHER WHIP 3', '/assets/images/products_images/APHRODISIA LEATHER WHIP/APHRODISIA LEATHER WHIP 3.jpg'),
+                                                                        (4, 2, 'SADOMASOCHISTIC PADDLE 1', '/assets/images/products_images/SADOMASOCHISTIC PADDLE/SADOMASOCHISTIC PADDLE 1.jpg'),
+                                                                        (5, 2, 'SADOMASOCHISTIC PADDLE 2', '/assets/images/products_images/SADOMASOCHISTIC PADDLE/SADOMASOCHISTIC PADDLE 2.jpg'),
+                                                                        (6, 2, 'SADOMASOCHISTIC PADDLE 3', '/assets/images/products_images/SADOMASOCHISTIC PADDLE/SADOMASOCHISTIC PADDLE 3.jpg'),
+                                                                        (7, 2, 'SADOMASOCHISTIC PADDLE 4', '/assets/images/products_images/SADOMASOCHISTIC PADDLE/SADOMASOCHISTIC PADDLE 4.jpg'),
+                                                                        (8, 3, 'SPADE WHIP 1', '/assets/images/products_images/SPADE WHIP/SPADE WHIP 1.jpg'),
+                                                                        (9, 3, 'SPADE WHIP 2', '/assets/images/products_images/SPADE WHIP/SPADE WHIP 2.jpg'),
+                                                                        (10, 3, 'SPADE WHIP 3', '/assets/images/products_images/SPADE WHIP/SPADE WHIP 3.jpg'),
+                                                                        (11, 4, 'LUKE WHIP 1', '/assets/images/products_images/LUKE WHIP/LUKE WHIP 1.jpg'),
+                                                                        (12, 4, 'LUKE WHIP 2', '/assets/images/products_images/LUKE WHIP/LUKE WHIP 2.jpg'),
+                                                                        (13, 4, 'LUKE WHIP 3', '/assets/images/products_images/LUKE WHIP/LUKE WHIP 3.jpg'),
+                                                                        (14, 5, 'LONG WHIP BLACK 1', '/assets/images/products_images/LONG WHIP BLACK/LONG WHIP BLACK 1.jpg'),
+                                                                        (15, 5, 'LONG WHIP BLACK 2', '/assets/images/products_images/LONG WHIP BLACK/LONG WHIP BLACK 2.jpg'),
+                                                                        (16, 6, 'AZÓTAME ADAM & EVE WHIP 1', '/assets/images/products_images/AZÓTAME ADAM & EVE WHIP/AZÓTAME ADAM & EVE WHIP 1.jpg'),
+                                                                        (17, 6, 'AZÓTAME ADAM & EVE WHIP 2', '/assets/images/products_images/AZÓTAME ADAM & EVE WHIP/AZÓTAME ADAM & EVE WHIP 2.webp'),
+                                                                        (18, 6, 'AZÓTAME ADAM & EVE WHIP 3', '/assets/images/products_images/AZÓTAME ADAM & EVE WHIP/AZÓTAME ADAM & EVE WHIP 3.webp'),
+                                                                        (19, 7, 'KITTY POINTER WHIP 1', '/assets/images/products_images/KITTY POINTER WHIP/KITTY POINTER WHIP 1.jpg'),
+                                                                        (20, 7, 'KITTY POINTER WHIP 2', '/assets/images/products_images/KITTY POINTER WHIP/KITTY POINTER WHIP 2.jpg'),
+                                                                        (21, 8, 'KENT WHIP 1', '/assets/images/products_images/KENT WHIP/KENT WHIP 1.jpg'),
+                                                                        (22, 8, 'KENT WHIP 2', '/assets/images/products_images/KENT WHIP/KENT WHIP 2.jpg'),
+                                                                        (23, 8, 'KENT WHIP 3', '/assets/images/products_images/KENT WHIP/KENT WHIP 3.jpg'),
+                                                                        (24, 9, 'SQUARED CROP BLACK 1', '/assets/images/products_images/SQUARED CROP BLACK/SQUARED CROP BLACK 1.jpg'),
+                                                                        (25, 9, 'SQUARED CROP BLACK 2', '/assets/images/products_images/SQUARED CROP BLACK/SQUARED CROP BLACK 2.jpg');
 
 -- --------------------------------------------------------
 
@@ -407,7 +438,7 @@ CREATE TABLE `user_id_seq` (
 --
 
 INSERT INTO `user_id_seq` (`next_val`) VALUES
-    (1);
+    (5);
 
 --
 -- Índices para tablas volcadas
@@ -517,7 +548,7 @@ ALTER TABLE `comment`
 -- AUTO_INCREMENT de la tabla `image`
 --
 ALTER TABLE `image`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de la tabla `product`
